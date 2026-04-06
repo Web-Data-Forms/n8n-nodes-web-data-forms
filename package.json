@@ -1,0 +1,56 @@
+{
+	"name": "n8n-nodes-web-data-forms",
+	"version": "0.1.0",
+	"description": "Web Data Forms nodes for n8n",
+	"license": "MIT",
+	"homepage": "https://webdataforms.com",
+	"keywords": [
+		"n8n-community-node-package",
+		"forms",
+		"surveys",
+		"automation",
+		"workflow",
+		"smart forms"
+	],
+	"author": {
+		"name": "Web Data Forms"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Web-Data-Forms/n8n-nodes-web-data-forms.git"
+	},
+	"scripts": {
+		"build": "n8n-node build",
+		"build:watch": "tsc --watch",
+		"dev": "n8n-node dev",
+		"dev:tunnel": "NODE_DEBUG=http,https,request WEBHOOK_URL=https://n8n.dotzcom.com export N8N_EDITOR_BASE_URL=https://n8n.dotzcom.com export N8N_PROXY_HOPS=1 && n8n-node dev",
+		"lint": "n8n-node lint",
+		"lint:fix": "n8n-node lint --fix",
+		"release": "n8n-node release",
+		"prepublishOnly": "n8n-node prerelease"
+	},
+	"files": [
+		"dist"
+	],
+	"n8n": {
+		"n8nNodesApiVersion": 1,
+		"strict": true,
+		"credentials": [
+			"dist/credentials/WebDataFormsApi.credentials.js"
+		],
+		"nodes": [
+			"dist/nodes/WebDataForms/WebDataForms.node.js",
+			"dist/nodes/WebDataForms/WebDataFormsTrigger.node.js"
+		]
+	},
+	"devDependencies": {
+		"@n8n/node-cli": "*",
+		"eslint": "9.32.0",
+		"prettier": "3.6.2",
+		"release-it": "^19.0.4",
+		"typescript": "5.9.2"
+	},
+	"peerDependencies": {
+		"n8n-workflow": "*"
+	}
+}
