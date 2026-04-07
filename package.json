@@ -23,7 +23,6 @@
 		"build": "n8n-node build",
 		"build:watch": "tsc --watch",
 		"dev": "n8n-node dev",
-		"dev:tunnel": "NODE_DEBUG=http,https,request WEBHOOK_URL=https://n8n.dotzcom.com export N8N_EDITOR_BASE_URL=https://n8n.dotzcom.com export N8N_PROXY_HOPS=1 && n8n-node dev",
 		"lint": "n8n-node lint",
 		"lint:fix": "n8n-node lint --fix",
 		"release": "n8n-node release",
