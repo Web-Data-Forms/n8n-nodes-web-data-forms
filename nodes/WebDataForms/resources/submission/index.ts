@@ -186,8 +186,9 @@ export const submissionDescription: INodeProperties[] = [
 		},
 		default: '',
 		required: true,
+		// eslint-disable-next-line n8n-nodes-base/node-param-description-wrong-for-dynamic-options
 		description:
-			'Select the Data Template (Form) to interact with. Choose from the list, or specify an ID using an <a href="https://docs.n8n.io/code/expressions/">expression</a>.',
+			'Select the Data Template (Form) to interact with. Choose from the list, or specify an ID using an <a href="https://docs.n8n.io/data/expressions/">expression</a>.',
 	},
 	...submissionCreateDescription,
 	...submissionFindDescription,
