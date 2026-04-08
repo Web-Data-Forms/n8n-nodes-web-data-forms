@@ -74,6 +74,9 @@ export const workflowUpdateDescription: INodeProperties[] = [
 		displayName: 'Comment',
 		name: 'comment',
 		type: 'string',
+		typeOptions: {
+			rows: 4,
+		},
 		displayOptions: { show: showOnlyForUpdate },
 		default: '',
 		description: 'A comment to add to the workflow update',
