@@ -1,5 +1,6 @@
 import {
 	NodeOperationError,
+	type IDataObject,
 	type IHookFunctions,
 	type IHttpRequestMethods,
 	type ILoadOptionsFunctions,
@@ -8,10 +9,9 @@ import {
 	type INodeTypeDescription,
 	type IWebhookFunctions,
 	type IWebhookResponseData,
-	type IDataObject,
 } from 'n8n-workflow';
-import { sanitizeNullUserId } from './utils';
 import { BASE_URL_API, PARTNER_ID } from './constants';
+import { sanitizeNullUserId } from './utils';
 
 export class WebDataFormsTrigger implements INodeType {
 	description: INodeTypeDescription = {
@@ -39,19 +39,19 @@ export class WebDataFormsTrigger implements INodeType {
 
 		properties: [
 			{
-				displayName: 'Event',
+				displayName: 'Trigger On',
 				name: 'event',
 				type: 'options',
 				options: [
 					{
 						name: 'New Submission',
 						value: 'ON_SUBMIT',
-						description: 'Triggers when a new submission is created',
+						description: 'Trigger when a new submission is created',
 					},
 					{
 						name: 'Workflow Update',
 						value: 'ON_WORKFLOW_CHANGE',
-						description: 'Triggers when a workflow is updated',
+						description: 'Trigger when a workflow is updated',
 					},
 				],
 				default: 'ON_SUBMIT',

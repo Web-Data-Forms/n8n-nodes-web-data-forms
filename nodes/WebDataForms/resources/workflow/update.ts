@@ -25,8 +25,9 @@ export const workflowUpdateDescription: INodeProperties[] = [
 		displayOptions: { show: showOnlyForUpdate },
 		default: '',
 		required: true,
+		// eslint-disable-next-line n8n-nodes-base/node-param-description-wrong-for-dynamic-options
 		description:
-			'The new status for the workflow. Choose from the list, or specify an ID using an <a href="https://docs.n8n.io/code/expressions/">expression</a>.',
+			'The new status for the workflow. Choose from the list, or specify an ID using an <a href="https://docs.n8n.io/data/expressions/">expression</a>.',
 	},
 	{
 		displayName: 'Priority Name or ID',
@@ -38,8 +39,9 @@ export const workflowUpdateDescription: INodeProperties[] = [
 		displayOptions: { show: showOnlyForUpdate },
 		default: '',
 		required: true,
+		// eslint-disable-next-line n8n-nodes-base/node-param-description-wrong-for-dynamic-options
 		description:
-			'The new priority for the workflow. Choose from the list, or specify an ID using an <a href="https://docs.n8n.io/code/expressions/">expression</a>.',
+			'The new priority for the workflow. Choose from the list, or specify an ID using an <a href="https://docs.n8n.io/data/expressions/">expression</a>.',
 	},
 	{
 		displayName: 'Type Name or ID',
@@ -51,8 +53,9 @@ export const workflowUpdateDescription: INodeProperties[] = [
 		displayOptions: { show: showOnlyForUpdate },
 		default: '',
 		required: true,
+		// eslint-disable-next-line n8n-nodes-base/node-param-description-wrong-for-dynamic-options
 		description:
-			'The new type for the workflow. Choose from the list, or specify an ID using an <a href="https://docs.n8n.io/code/expressions/">expression</a>.',
+			'The new type for the workflow. Choose from the list, or specify an ID using an <a href="https://docs.n8n.io/data/expressions/">expression</a>.',
 	},
 	{
 		displayName: 'Assignee Name or ID',
@@ -63,8 +66,9 @@ export const workflowUpdateDescription: INodeProperties[] = [
 		},
 		displayOptions: { show: showOnlyForUpdate },
 		default: '',
+		// eslint-disable-next-line n8n-nodes-base/node-param-description-wrong-for-dynamic-options
 		description:
-			'The user to assign the workflow to. Choose from the list, or specify an ID using an <a href="https://docs.n8n.io/code/expressions/">expression</a>.',
+			'The user to assign the workflow to. Choose from the list, or specify an ID using an <a href="https://docs.n8n.io/data/expressions/">expression</a>.',
 	},
 	{
 		displayName: 'Comment',

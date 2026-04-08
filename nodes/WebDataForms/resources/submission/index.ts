@@ -1,10 +1,10 @@
 import type { INodeProperties } from 'n8n-workflow';
 import { BASE_URL_API } from '../../constants';
+import { sanitizePostReceive } from '../../utils';
 import { submissionCreateDescription } from './create';
 import { submissionFindDescription } from './find';
 import { submissionSearchDescription } from './search';
 import { submissionUpdateDescription } from './update';
-import { sanitizePostReceive } from '../../utils';
 
 const showOnlyForSubmissions = {
 	resource: ['submission'],
@@ -85,7 +85,7 @@ export const submissionDescription: INodeProperties[] = [
 						method: 'GET',
 						url: `=${BASE_URL_API}/automations/data-template-submissions/groups/<groupId>/data-templates/{{$parameter.dataTemplateId}}`,
 						qs: {
-							'page-size': '10',
+							'page-size': '={{$parameter.limit}}',
 							detailed: 'true',
 						},
 					},
