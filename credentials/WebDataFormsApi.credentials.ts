@@ -15,7 +15,8 @@ export class WebDataFormsApi implements ICredentialType {
 	iconBasePath = 'file:../nodes/WebDataForms/';
 
 	// Link to your community node's README
-	documentationUrl = 'https://github.com/org/-web-data-forms?tab=readme-ov-file#credentials';
+	documentationUrl =
+		'https://github.com/Web-Data-Forms/n8n-nodes-web-data-forms?tab=readme-ov-file#credentials';
 
 	properties: INodeProperties[] = [
 		{
@@ -42,7 +43,11 @@ export class WebDataFormsApi implements ICredentialType {
 			Authorization: 'none',
 		};
 
-		if (requestOptions.url && typeof requestOptions.url === 'string' && requestOptions.url.includes('<groupId>')) {
+		if (
+			requestOptions.url &&
+			typeof requestOptions.url === 'string' &&
+			requestOptions.url.includes('<groupId>')
+		) {
 			requestOptions.url = requestOptions.url.replace('<groupId>', credentials.groupId as string);
 		}
 

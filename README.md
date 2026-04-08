@@ -47,8 +47,8 @@ To use this node, you will need to authenticate with your Web Data Forms account
 
 You will need the following information to set up your credentials:
 
-- **API Key**: Your unique API key found in the Web Data Forms Group->Info page.
-- **Group ID**: Your specific Group identifier found in in the Web Data Forms Group->Info page.
+- **API Key**: Your unique API key found in the Web Data Forms Group->Information page.
+- **Group ID**: Your specific Group identifier found in in the Web Data Forms Group->Information page.
 
 ## Compatibility
 
