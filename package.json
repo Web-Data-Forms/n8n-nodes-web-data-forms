@@ -1,5 +1,5 @@
 {
-	"name": "n8n-nodes-web-data-forms",
+	"name": "@webdataforms/n8n-nodes-web-data-forms",
 	"version": "0.1.0",
 	"description": "Web Data Forms nodes for n8n",
 	"license": "MIT",
@@ -14,6 +14,10 @@
 	],
 	"author": {
 		"name": "Web Data Forms"
+	},
+	"publishConfig": {
+		"access": "public",
+		"provenance": true
 	},
 	"repository": {
 		"type": "git",

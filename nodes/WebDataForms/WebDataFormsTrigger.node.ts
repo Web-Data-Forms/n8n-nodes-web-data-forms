@@ -20,6 +20,7 @@ export class WebDataFormsTrigger implements INodeType {
 		icon: { light: 'file:webDataForms.svg', dark: 'file:webDataForms.dark.svg' },
 		group: ['trigger'],
 		version: 1,
+		subtitle: '={{$parameter["event"] === "ON_SUBMIT" ? "new submission" : "workflow update"}}',
 		description: 'Handle Web Data Forms webhooks',
 		defaults: {
 			name: 'Web Data Forms Trigger',
