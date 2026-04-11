@@ -1,4 +1,5 @@
 import {
+	NodeApiError,
 	NodeConnectionTypes,
 	NodeOperationError,
 	type IHttpRequestMethods,
@@ -66,12 +67,16 @@ export class WebDataForms implements INodeType {
 					},
 					json: true,
 				};
-				const response = await this.helpers.httpRequestWithAuthentication.call(
-					this,
-					'webDataFormsApi',
-					options,
-				);
-				return response.dataTemplatesOptionsSchema.options;
+				try {
+					const response = await this.helpers.httpRequestWithAuthentication.call(
+						this,
+						'webDataFormsApi',
+						options,
+					);
+					return response.dataTemplatesOptionsSchema.options;
+				} catch (error) {
+					throw new NodeApiError(this.getNode(), error as import('n8n-workflow').JsonObject);
+				}
 			},
 			async getTemplateFields(this: ILoadOptionsFunctions): Promise<INodePropertyOptions[]> {
 				const dataTemplateId = this.getCurrentNodeParameter('dataTemplateId');
@@ -95,12 +100,16 @@ export class WebDataForms implements INodeType {
 					},
 					json: true,
 				};
-				const response = await this.helpers.httpRequestWithAuthentication.call(
-					this,
-					'webDataFormsApi',
-					options,
-				);
-				return response.dataTemplateSchema.fields;
+				try {
+					const response = await this.helpers.httpRequestWithAuthentication.call(
+						this,
+						'webDataFormsApi',
+						options,
+					);
+					return response.dataTemplateSchema.fields;
+				} catch (error) {
+					throw new NodeApiError(this.getNode(), error as import('n8n-workflow').JsonObject);
+				}
 			},
 			async getSearchableFields(this: ILoadOptionsFunctions): Promise<INodePropertyOptions[]> {
 				const dataTemplateId = this.getCurrentNodeParameter('dataTemplateId');
@@ -124,12 +133,16 @@ export class WebDataForms implements INodeType {
 					},
 					json: true,
 				};
-				const response = await this.helpers.httpRequestWithAuthentication.call(
-					this,
-					'webDataFormsApi',
-					options,
-				);
-				return response.searchableFieldsSchema.fields;
+				try {
+					const response = await this.helpers.httpRequestWithAuthentication.call(
+						this,
+						'webDataFormsApi',
+						options,
+					);
+					return response.searchableFieldsSchema.fields;
+				} catch (error) {
+					throw new NodeApiError(this.getNode(), error as import('n8n-workflow').JsonObject);
+				}
 			},
 			async getWorkflowStatuses(this: ILoadOptionsFunctions): Promise<INodePropertyOptions[]> {
 				const credentials = await this.getCredentials('webDataFormsApi');
@@ -145,12 +158,16 @@ export class WebDataForms implements INodeType {
 					},
 					json: true,
 				};
-				const response = await this.helpers.httpRequestWithAuthentication.call(
-					this,
-					'webDataFormsApi',
-					options,
-				);
-				return response.workflowStateOptionsSchema.status.options;
+				try {
+					const response = await this.helpers.httpRequestWithAuthentication.call(
+						this,
+						'webDataFormsApi',
+						options,
+					);
+					return response.workflowStateOptionsSchema.status.options;
+				} catch (error) {
+					throw new NodeApiError(this.getNode(), error as import('n8n-workflow').JsonObject);
+				}
 			},
 			async getWorkflowPriorities(this: ILoadOptionsFunctions): Promise<INodePropertyOptions[]> {
 				const credentials = await this.getCredentials('webDataFormsApi');
@@ -166,12 +183,16 @@ export class WebDataForms implements INodeType {
 					},
 					json: true,
 				};
-				const response = await this.helpers.httpRequestWithAuthentication.call(
-					this,
-					'webDataFormsApi',
-					options,
-				);
-				return response.workflowStateOptionsSchema.priority.options;
+				try {
+					const response = await this.helpers.httpRequestWithAuthentication.call(
+						this,
+						'webDataFormsApi',
+						options,
+					);
+					return response.workflowStateOptionsSchema.priority.options;
+				} catch (error) {
+					throw new NodeApiError(this.getNode(), error as import('n8n-workflow').JsonObject);
+				}
 			},
 			async getWorkflowTypes(this: ILoadOptionsFunctions): Promise<INodePropertyOptions[]> {
 				const credentials = await this.getCredentials('webDataFormsApi');
@@ -187,12 +208,16 @@ export class WebDataForms implements INodeType {
 					},
 					json: true,
 				};
-				const response = await this.helpers.httpRequestWithAuthentication.call(
-					this,
-					'webDataFormsApi',
-					options,
-				);
-				return response.workflowStateOptionsSchema.type.options;
+				try {
+					const response = await this.helpers.httpRequestWithAuthentication.call(
+						this,
+						'webDataFormsApi',
+						options,
+					);
+					return response.workflowStateOptionsSchema.type.options;
+				} catch (error) {
+					throw new NodeApiError(this.getNode(), error as import('n8n-workflow').JsonObject);
+				}
 			},
 			async getGroupUsers(this: ILoadOptionsFunctions): Promise<INodePropertyOptions[]> {
 				const credentials = await this.getCredentials('webDataFormsApi');
@@ -208,17 +233,21 @@ export class WebDataForms implements INodeType {
 					},
 					json: true,
 				};
-				const response = await this.helpers.httpRequestWithAuthentication.call(
-					this,
-					'webDataFormsApi',
-					options,
-				);
-				const users = response.groupUserOptionsSchema.options as INodePropertyOptions[];
-				users.unshift({
-					name: '- Unassigned (None) -',
-					value: '',
-				});
-				return users;
+				try {
+					const response = await this.helpers.httpRequestWithAuthentication.call(
+						this,
+						'webDataFormsApi',
+						options,
+					);
+					const users = response.groupUserOptionsSchema.options as INodePropertyOptions[];
+					users.unshift({
+						name: '- Unassigned (None) -',
+						value: '',
+					});
+					return users;
+				} catch (error) {
+					throw new NodeApiError(this.getNode(), error as import('n8n-workflow').JsonObject);
+				}
 			},
 		},
 	};
