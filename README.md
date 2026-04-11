@@ -50,6 +50,10 @@ You will need the following information to set up your credentials:
 - **API Key**: Your unique API key found in the Web Data Forms Group->Information page.
 - **Group ID**: Your specific Group identifier found in in the Web Data Forms Group->Information page.
 
+## Important Note
+
+Automation must be enabled for the particluar Data Template (form) that you want to use on n8n. To enable automation for a Data Template please navigate to the Data Templates page, find the appropriate Data Template, click on the 'Details / Modify' button, set Automation to Enabled and finally click the 'Update' button to save changes.
+
 ## Compatibility
 
 - Minimum n8n version: 1.0.0
