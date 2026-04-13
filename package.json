@@ -18,7 +18,9 @@
 		"workflow automation"
 	],
 	"author": {
-		"name": "Web Data Forms"
+		"name": "Web Data Forms",
+		"email": "5yoqhr6kv@mozmail.com",
+		"url": "https://webdataforms.com"
 	},
 	"publishConfig": {
 		"access": "public",
