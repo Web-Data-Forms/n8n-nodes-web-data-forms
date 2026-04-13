@@ -1,6 +1,6 @@
 {
 	"name": "@webdataforms/n8n-nodes-web-data-forms",
-	"version": "0.1.1",
+	"version": "1.0.0",
 	"description": "Web Data Forms nodes for n8n",
 	"license": "MIT",
 	"homepage": "https://webdataforms.com",
