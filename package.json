@@ -1,16 +1,21 @@
 {
 	"name": "@webdataforms/n8n-nodes-web-data-forms",
 	"version": "1.0.0",
-	"description": "Web Data Forms nodes for n8n",
+	"description": "The deepest n8n integration for any forms platform. Go beyond simple webhooks with full-lifecycle triggers, submission management, and deep submission/form workflow CRUD operations.",
 	"license": "MIT",
 	"homepage": "https://webdataforms.com",
 	"keywords": [
 		"n8n-community-node-package",
+		"web-data-forms",
 		"forms",
-		"surveys",
+		"no code form builder",
+		"form workflow",
 		"automation",
-		"workflow",
-		"smart forms"
+		"brandable forms",
+		"multi user",
+		"smart forms",
+		"data collection",
+		"workflow automation"
 	],
 	"author": {
 		"name": "Web Data Forms"

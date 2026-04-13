@@ -2,7 +2,7 @@
 
 This is an n8n community node. It lets you use [Web Data Forms](https://webdataforms.com) in your n8n workflows.
 
-Web Data Forms is a powerful front-end for automations and AI workflows. It enables businesses to build smart, branded forms and surveys, automate complex processes with integrated workflows, and manage data with a built-in headless CMS and real-time visual reporting.
+The deepest n8n integration for any forms platform. Go beyond simple webhooks with full-lifecycle triggers, submission management, and deep submission/form workflow CRUD operations. Web Data Forms is a powerful front-end for automations and AI workflows. It enables users to build smart, branded forms and automate complex processes with integrated form workflows and visual reporting.
 
 [n8n](https://n8n.io/) is a [fair-code licensed](https://docs.n8n.io/sustainable-use-license/) workflow automation platform.
 
@@ -41,7 +41,8 @@ To use this node, you will need to authenticate with your Web Data Forms account
 ### Prerequisites
 
 1.  Sign up for a [Web Data Forms](https://webdataforms.com/pricing) account.
-2.  Log in to your [Web Data Forms dashboard](https://webapp.webdataforms.com).
+2.  Log in to your [Web Data Forms account](https://webapp.webdataforms.com).
+3.  Retreive your Group ID and API Key (details below).
 
 ### Authentication
 
