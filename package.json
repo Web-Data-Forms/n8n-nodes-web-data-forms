@@ -1,6 +1,6 @@
 {
 	"name": "@webdataforms/n8n-nodes-web-data-forms",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "The deepest n8n integration for any forms platform. Go beyond simple webhooks with full-lifecycle triggers, submission management, and deep submission/form workflow CRUD operations.",
 	"license": "MIT",
 	"homepage": "https://webdataforms.com",
